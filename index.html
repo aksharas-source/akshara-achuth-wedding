@@ -10,6 +10,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
+
 <style>
 
 body {
@@ -77,13 +78,6 @@ h1 {
 }
 
 
-.quote {
-    font-style: italic;
-    margin-top: 30px;
-    font-size: 18px;
-}
-
-
 /* Photo */
 
 .photo-frame {
@@ -128,6 +122,26 @@ h1 {
 }
 
 
+/* Countdown */
+
+.countdown {
+    margin-top: 45px;
+}
+
+
+.countdown h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: normal;
+    color: #8a6512;
+}
+
+
+#timer {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+
 /* RSVP */
 
 .rsvp {
@@ -149,12 +163,21 @@ h1 {
 }
 
 
+/* Closing */
+
+.closing {
+    margin-top: 45px;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
 /* Floral corners */
 
 .corner-flower {
     position: absolute;
     font-size: 25px;
-    z-index: 1;
 }
 
 
@@ -186,34 +209,34 @@ h1 {
 
 @keyframes fadeIn {
 
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 }
 
 
-/* Extra mobile adjustment */
+/* Mobile */
 
-@media (max-width: 500px) {
+@media (max-width:500px) {
 
-    h1 {
-        font-size: 38px;
-    }
+h1 {
+    font-size: 38px;
+}
 
-    .details {
-        font-size: 18px;
-    }
+.details {
+    font-size: 18px;
+}
 
-    .card {
-        padding: 35px 20px;
-    }
+.card {
+    padding: 35px 20px;
+}
 
 }
 
@@ -280,9 +303,17 @@ Vengalloor
 </div>
 
 
-<p class="quote">
-"A beautiful beginning to a lifetime together"
-</p>
+<div class="countdown">
+
+<h2>
+Counting down to our special day
+</h2>
+
+<div id="timer">
+Loading...
+</div>
+
+</div>
 
 
 <div class="photo-frame">
@@ -299,3 +330,81 @@ A glimpse of our journey
 <div class="rsvp">
 
 <p>
+We would be delighted by your presence on our special day.
+</p>
+
+<p>
+Kindly confirm your attendance.
+</p>
+
+
+<a href="#" class="rsvp-button">
+💌 RSVP
+</a>
+
+
+</div>
+
+
+<div class="closing">
+
+<p>
+With love and gratitude,
+<br>
+we look forward to celebrating this beautiful day with you.
+</p>
+
+</div>
+
+
+<div class="flowers">
+🌼 🌿 🌼
+</div>
+
+
+<div class="corner-flower bottom-left">🌼</div>
+<div class="corner-flower bottom-right">🌼</div>
+
+
+</div>
+
+</div>
+
+
+<script>
+
+const weddingDate = new Date("August 23, 2026 00:00:00").getTime();
+
+
+const countdown = setInterval(function() {
+
+const now = new Date().getTime();
+
+const distance = weddingDate - now;
+
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+document.getElementById("timer").innerHTML =
+days + " days " +
+hours + " hrs " +
+minutes + " mins " +
+seconds + " secs";
+
+
+}, 1000);
+
+
+</script>
+
+
+</body>
+
+</html>
