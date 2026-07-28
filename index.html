@@ -32,6 +32,7 @@
             padding: 45px 30px;
             border: 2px solid #c9a227;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            animation: fadeIn 1.5s ease;
         }
 
         .flowers {
@@ -136,7 +137,20 @@
 .rsvp-button:hover {
     background: #c9a227;
     color: white;
-}      
+}   
+   @keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}     
     </style>
 
 </head>
