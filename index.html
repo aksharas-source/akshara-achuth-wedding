@@ -2,50 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Akshara & Achuth</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Akshara & Achuth</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
 
-       body {
+
+<style>
+
+body {
     margin: 0;
     background: #fff8ed;
     font-family: "Lora", serif;
     color: #5c4328;
 }
 
-        .invitation {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 25px;
-        }
 
-        .card {
-            max-width: 550px;
-            width: 100%;
-            text-align: center;
-            background: #fffdf8;
-            padding: 45px 30px;
-            border: 2px solid #c9a227;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            animation: fadeIn 1.5s ease;
-        }
+.invitation {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
 
-        .flowers {
-            font-size: 30px;
-            letter-spacing: 8px;
-        }
 
-        .small-text {
-            font-size: 18px;
-            margin-top: 25px;
-        }
+.card {
+    position: relative;
+    overflow: hidden;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    background: #fffdf8;
+    padding: 45px 30px;
+    border: 2px solid #c9a227;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    animation: fadeIn 1.5s ease;
+}
 
-     h1 {
+
+.flowers {
+    font-size: 30px;
+    letter-spacing: 8px;
+}
+
+
+.small-text {
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+
+h1 {
     font-family: "Playfair Display", serif;
     font-size: 52px;
     font-weight: 500;
@@ -53,54 +64,59 @@
     margin: 25px 0;
 }
 
-        .ampersand {
-            font-size: 35px;
-            color: #c9a227;
-        }
 
-        .details {
-            margin-top: 35px;
-            font-size: 20px;
-            line-height: 1.8;
-        }
-
-        .quote {
-            font-style: italic;
-            margin-top: 30px;
-            font-size: 18px;
-        }
+.ampersand {
+    font-size: 35px;
+    color: #c9a227;
+}
 
 
-        /* Engagement photo section */
-
-        .photo-frame {
-            margin-top: 40px;
-            overflow: hidden;
-        }
-
-
-        .photo-frame img {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            display: block;
-            margin: auto;
-            border: 8px solid #d4af37;
-            padding: 8px;
-            background: #fffdf8;
-            box-sizing: border-box;
-        }
+.details {
+    margin-top: 35px;
+    font-size: 20px;
+    line-height: 1.8;
+}
 
 
-        .photo-frame p {
-            font-style: italic;
-            margin-top: 15px;
-            font-size: 18px;
-        }
+.quote {
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+
+/* Photo */
+
+.photo-frame {
+    margin-top: 40px;
+}
+
+
+.photo-frame img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border: 8px solid #d4af37;
+    padding: 8px;
+    background: #fffdf8;
+    box-sizing: border-box;
+}
+
+
+.photo-frame p {
+    font-style: italic;
+    margin-top: 15px;
+}
+
+
+/* Location */
 
 .location-button {
     margin-top: 30px;
 }
+
 
 .location-button a {
     display: inline-block;
@@ -110,17 +126,17 @@
     text-decoration: none;
     border-radius: 30px;
     font-size: 18px;
-    transition: 0.3s;
 }
 
-.location-button a:hover {
-    background: #8a6512;
-}
-  .rsvp {
+
+/* RSVP */
+
+.rsvp {
     margin-top: 45px;
     font-size: 18px;
     line-height: 1.8;
 }
+
 
 .rsvp-button {
     display: inline-block;
@@ -131,14 +147,45 @@
     text-decoration: none;
     border-radius: 30px;
     font-size: 18px;
-    transition: 0.3s;
 }
 
-.rsvp-button:hover {
-    background: #c9a227;
-    color: white;
-}   
-   @keyframes fadeIn {
+
+/* Flowers */
+
+.corner-flower {
+    position: absolute;
+    font-size: 25px;
+    z-index: 1;
+}
+
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
 
     from {
         opacity: 0;
@@ -150,36 +197,10 @@
         transform: translateY(0);
     }
 
-} 
-        .corner-flower {
-    position: absolute;
-    font-size: 35px;
 }
 
-.card {
-    position: relative;
-}
 
-.top-left {
-    top: 15px;
-    left: 15px;
-}
-
-.top-right {
-    top: 15px;
-    right: 15px;
-}
-
-.bottom-left {
-    bottom: 15px;
-    left: 15px;
-}
-
-.bottom-right {
-    bottom: 15px;
-    right: 15px;
-}
-    </style>
+</style>
 
 </head>
 
@@ -189,91 +210,105 @@
 
 <div class="invitation">
 
-    <div class="card">
+
+<div class="card">
+
+
 <div class="corner-flower top-left">🌿</div>
 <div class="corner-flower top-right">🌿</div>
 
-        <div class="flowers">
-            🌿 🌼 🌿
-        </div>
+
+<div class="flowers">
+🌿 🌼 🌿
+</div>
 
 
-        <p class="small-text">
-            Together with their families,
-        </p>
+<p class="small-text">
+Together with their families,
+</p>
 
 
-        <h1>
-            Akshara
-            <div class="ampersand">&</div>
-            Achuth
-        </h1>
+<h1>
+Akshara
+<div class="ampersand">&</div>
+Achuth
+</h1>
 
 
-        <p class="small-text">
-            invite you to celebrate their wedding
-        </p>
+<p class="small-text">
+invite you to celebrate their wedding
+</p>
 
 
-        <div class="details">
+<div class="details">
 
-            <strong>
-                23rd August 2026
-            </strong>
+<strong>
+23rd August 2026
+</strong>
 
-            <br><br>
+<br><br>
 
-            Sheron Cultural Centre
-            <br>
-            Vengalloor
+Sheron Cultural Centre
+<br>
+Vengalloor
 
-        </div>
+</div>
+
+
 <div class="location-button">
 
-    <a href="https://maps.google.com/?q=Sheron+Cultural+Centre+Vengalloor" target="_blank">
-        📍 View Location
-    </a>
+<a href="https://maps.google.com/?q=Sheron+Cultural+Centre+Vengalloor" target="_blank">
+📍 View Location
+</a>
 
 </div>
+
+
+<p class="quote">
+"A beautiful beginning to a lifetime together"
+</p>
+
+
+<div class="photo-frame">
+
+<img src="images/engagement.jpg" alt="Akshara and Achuth">
+
+<p>
+A glimpse of our journey
+</p>
+
+</div>
+
+
 <div class="rsvp">
 
-    <p>
-        We would be delighted by your presence on our special day.
-    </p>
+<p>
+We would be delighted by your presence on our special day.
+</p>
 
-    <p>
-        Kindly confirm your attendance.
-    </p>
+<p>
+Kindly confirm your attendance.
+</p>
 
-    <a href="#" class="rsvp-button">
-        💌 RSVP
-    </a>
+<a href="#" class="rsvp-button">
+💌 RSVP
+</a>
 
 </div>
-        <p class="quote">
-            "A beautiful beginning to a lifetime together"
-        </p>
 
 
-        <div class="photo-frame">
-
-            <img src="images/engagement.jpg" alt="Akshara and Achuth">
-
-            <p>
-                A glimpse of our journey
-            </p>
-
-        </div>
+<div class="flowers">
+🌼 🌿 🌼
+</div>
 
 
-        <div class="flowers">
-            🌼 🌿 🌼
-        </div>
+<div class="corner-flower bottom-left">🌼</div>
+<div class="corner-flower bottom-right">🌼</div>
 
 
-    </div>
-<div class="corner-flower top-left">🌿</div>
-<div class="corner-flower top-right">🌿</div>
+</div>
+
+
 </div>
 
 
