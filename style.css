@@ -1322,11 +1322,12 @@ transition:all .9s ease;
 opacity:1;
 transform:translateY(0);
 }
-.hero-image {
-    width: 180px;
-    height: 180px;
+.hero-content .hero-image {
+    width: 180px !important;
+    height: 180px !important;
+    max-width: 180px !important;
     object-fit: cover;
     border-radius: 50%;
-    margin: 20px auto;
     display: block;
+    margin: 20px auto;
 }
