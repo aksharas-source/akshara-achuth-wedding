@@ -321,7 +321,9 @@ width:100%;
 
 .hero{
 
-height:100vh;
+min-height:100vh;
+padding-top:170px;
+padding-bottom:80px;
 
 display:flex;
 
@@ -1207,9 +1209,21 @@ footer{
 
 .navbar{
 
-    padding:15px 20px;
-    flex-direction:column;
-    gap:15px;
+.navbar{
+    padding:12px 20px;
+}
+
+.logo{
+    font-size:2rem;
+}
+
+nav{
+    gap:12px;
+}
+
+nav a{
+    font-size:0.95rem;
+}
 
 }
 
