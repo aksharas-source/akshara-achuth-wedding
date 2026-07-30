@@ -1331,6 +1331,6 @@ transform:translateY(0);
     display: block;
     margin: 20px auto;
 }
-.hero {
-    padding-top: 100px;
+.hero-content {
+    padding-top: 160px;
 }
