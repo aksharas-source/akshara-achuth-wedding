@@ -1,0 +1,13 @@
+body{margin:0;font-family:Georgia,serif;background:#fffdf8;color:#444}
+.hero{height:100vh;background:url('images/hero.jpg') center/cover no-repeat;display:flex}
+.overlay{background:rgba(0,0,0,.45);color:#fff;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+h1{font-size:3rem}
+h1 span{color:#f4d27a}
+.btn{padding:12px 24px;background:#f4d27a;color:#333;text-decoration:none;border-radius:30px}
+section{max-width:900px;margin:auto;padding:60px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+.grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;background:#eee}
+form{display:flex;flex-direction:column;gap:10px}
+input,select,textarea,button{padding:12px;font-size:1rem}
+button{cursor:pointer}
+footer{text-align:center;padding:30px;background:#faf3ea}

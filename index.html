@@ -1,410 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Akshara & Achuth</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
-
-<style>
-
-body {
-    margin: 0;
-    background: #fff8ed;
-    font-family: "Lora", serif;
-    color: #5c4328;
-}
-
-
-.invitation {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-}
-
-
-.card {
-    position: relative;
-    overflow: hidden;
-    max-width: 550px;
-    width: 100%;
-    text-align: center;
-    background: #fffdf8;
-    padding: 45px 30px;
-    border: 2px solid #c9a227;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    animation: fadeIn 1.5s ease;
-}
-
-
-.flowers {
-    font-size: 30px;
-    letter-spacing: 8px;
-}
-
-
-.small-text {
-    font-size: 18px;
-    margin-top: 25px;
-}
-
-
-h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 42px;
-    font-weight: 500;
-    color: #8a6512;
-    margin: 25px 0;
-}
-
-
-.ampersand {
-    font-size: 30px;
-    color: #c9a227;
-}
-
-
-.details {
-    margin-top: 35px;
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-
-/* Photo */
-
-.photo-frame {
-    margin-top: 40px;
-}
-
-
-.photo-frame img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    display: block;
-    margin: auto;
-    border: 8px solid #d4af37;
-    padding: 8px;
-    background: #fffdf8;
-    box-sizing: border-box;
-}
-
-
-.photo-frame p {
-    font-style: italic;
-    margin-top: 15px;
-}
-
-
-/* Location */
-
-.location-button {
-    margin-top: 30px;
-}
-
-
-.location-button a {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #c9a227;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 18px;
-}
-
-
-/* Countdown */
-
-.countdown {
-    margin-top: 45px;
-}
-
-
-.countdown h2 {
-    font-family: "Playfair Display", serif;
-    font-weight: normal;
-    color: #8a6512;
-}
-
-
-#timer {
-    margin-top: 20px;
-    font-size: 22px;
-}
-
-
-/* RSVP */
-
-.rsvp {
-    margin-top: 45px;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-
-.rsvp-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 30px;
-    border: 2px solid #c9a227;
-    color: #8a6512;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 18px;
-}
-
-
-/* Closing */
-
-.closing {
-    margin-top: 45px;
-    font-style: italic;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-
-/* Floral corners */
-
-.corner-flower {
-    position: absolute;
-    font-size: 25px;
-}
-
-
-.top-left {
-    top: 20px;
-    left: 20px;
-}
-
-
-.top-right {
-    top: 20px;
-    right: 20px;
-}
-
-
-.bottom-left {
-    bottom: 20px;
-    left: 20px;
-}
-
-
-.bottom-right {
-    bottom: 20px;
-    right: 20px;
-}
-
-
-/* Animation */
-
-@keyframes fadeIn {
-
-from {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-}
-
-
-/* Mobile */
-
-@media (max-width:500px) {
-
-h1 {
-    font-size: 38px;
-}
-
-.details {
-    font-size: 18px;
-}
-
-.card {
-    padding: 35px 20px;
-}
-
-}
-
-</style>
-
+<title>Akshara & Achuth | Wedding Invitation</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
+<header class="hero">
+  <div class="overlay">
+    <h1>Akshara <span>&</span> Achuth</h1>
+    <p>Together with our families, we invite you to celebrate our wedding.</p>
+    <h2>23 August 2026</h2>
+    <a class="btn" href="#details">View Invitation</a>
+  </div>
+</header>
 
+<section id="story">
+<h2>Our Story</h2>
+<p>Every beautiful journey begins with a simple hello. Ours grew into friendship, laughter, love, and a promise of forever.</p>
+</section>
 
-<div class="invitation">
+<section id="details">
+<h2>Wedding Details</h2>
+<p><strong>Date:</strong> 23 August 2026</p>
+<p><strong>Venue:</strong> Sheron Cultural Centre, Vengalloor</p>
+<p><a href="https://maps.google.com" target="_blank">Open Google Maps</a></p>
+</section>
 
-<div class="card">
+<section id="countdown">
+<h2>Countdown</h2>
+<div id="timer"></div>
+</section>
 
-
-<div class="corner-flower top-left">🌿</div>
-<div class="corner-flower top-right">🌿</div>
-
-
-<div class="flowers">
-🌿 🌼 🌿
+<section id="gallery">
+<h2>Gallery</h2>
+<p>Add your engagement photos inside the <code>images</code> folder and update the image names below.</p>
+<div class="grid">
+<img src="images/photo1.jpg" alt="">
+<img src="images/photo2.jpg" alt="">
+<img src="images/photo3.jpg" alt="">
+<img src="images/photo4.jpg" alt="">
 </div>
-
-
-<p class="small-text">
-Together with their families,
-</p>
-
-
-<h1>
-Akshara
-<div class="ampersand">&</div>
-Achuth
-</h1>
-
-
-<p class="small-text">
-invite you to celebrate their wedding
-</p>
-
-
-<div class="details">
-
-<strong>
-23rd August 2026
-</strong>
-
-<br><br>
-
-Sheron Cultural Centre
-<br>
-Vengalloor
-
-</div>
-
-
-<div class="location-button">
-
-<a href="https://maps.google.com/?q=Sheron+Cultural+Centre+Vengalloor" target="_blank">
-📍 View Location
-</a>
-
-</div>
-
-
-<div class="countdown">
-
-<h2>
-Counting down to our special day
-</h2>
-
-<div id="timer">
-Loading...
-</div>
-
-</div>
-
-
-<div class="photo-frame">
-
-<img src="images/engagement.jpg" alt="Akshara and Achuth">
-
-<p>
-A glimpse of our journey
-</p>
-
-</div>
-
-
-<div class="rsvp">
-
-<p>
-We would be delighted by your presence on our special day.
-</p>
-
-<p>
-Kindly confirm your attendance.
-</p>
-
-
-<a href="#" class="rsvp-button">
-💌 RSVP
-</a>
-
-
-</div>
-
-
-<div class="closing">
-
-<p>
-With love and gratitude,
-<br>
-we look forward to celebrating this beautiful day with you.
-</p>
-
-</div>
-
-
-<div class="flowers">
-🌼 🌿 🌼
-</div>
-
-
-<div class="corner-flower bottom-left">🌼</div>
-<div class="corner-flower bottom-right">🌼</div>
-
-
-</div>
-
-</div>
-
-
-<script>
-
-const weddingDate = new Date("August 23, 2026 00:00:00").getTime();
-
-
-const countdown = setInterval(function() {
-
-const now = new Date().getTime();
-
-const distance = weddingDate - now;
-
-
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-
-document.getElementById("timer").innerHTML =
-days + " days " +
-hours + " hrs " +
-minutes + " mins " +
-seconds + " secs";
-
-
-}, 1000);
-
-
-</script>
-
-
+</section>
+
+<section id="rsvp">
+<h2>RSVP</h2>
+<form onsubmit="return submitRSVP(event)">
+<input required placeholder="Your Name">
+<input placeholder="Phone Number">
+<select>
+<option>Will Attend</option>
+<option>Unable to Attend</option>
+</select>
+<textarea placeholder="Message"></textarea>
+<button type="submit">Send RSVP</button>
+</form>
+<p id="thanks"></p>
+</section>
+
+<footer>
+<p>With love,<br><strong>Akshara & Achuth</strong></p>
+</footer>
+<script src="script.js"></script>
 </body>
-
 </html>
